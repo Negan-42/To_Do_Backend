@@ -9,6 +9,7 @@ from .models import Task
 from .serializers import TaskSerializer
 from django.contrib.auth.models import User
 import json
+from django.http import HttpResponse
 
 
 
@@ -143,3 +144,9 @@ class UserRegistrationView(APIView):
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
         #git test
+
+
+
+       
+        def home(request):
+            return HttpResponse("Welcome to the Home Page")
