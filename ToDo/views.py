@@ -8,9 +8,13 @@ from django.contrib.auth.hashers import make_password
 from .models import Task
 from .serializers import TaskSerializer
 from django.contrib.auth.models import User
-import json
+from django.http import JsonResponse
 
+class HomeView(APIView):
+    permission_classes = [AllowAny]
 
+    def get(self, request):
+        return JsonResponse({"message": "Welcome to the To-Do Backend API"}, status=200)
 
 # View to get all tasks for the logged-in user
 class TaskGetView(APIView):
