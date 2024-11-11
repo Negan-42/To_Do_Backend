@@ -11,6 +11,4 @@ urlpatterns = [
     path('complete/<int:pk>/',TaskCompleteToggleView.as_view(), name='complete_task'), 
     path('tasks/update-order/', TaskOrderUpdateView.as_view(), name='task-update-order'),
     path('register/', UserRegistrationView.as_view(), name='register'),
-    path('', views.home, name='home'),  # Define the home view
-
 ]
