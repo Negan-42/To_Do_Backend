@@ -15,7 +15,8 @@ import dj_database_url
 import os
 import dotenv
 
-# Load environment variables from a .env file
+# Load environment v
+# ariables from a .env file
 dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -137,11 +138,15 @@ SIMPLE_JWT = {
 }
 
 # CORS configuration
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
-CORS_ALLOW_ALL_ORIGINS = False if CORS_ALLOWED_ORIGINS else True
+#    #"https://another-allowed-domain.com",
+    # Add other allowed origins as needed
+#]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 # Static files (CSS, JavaScript, Images)
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
