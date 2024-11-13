@@ -37,7 +37,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'your-default-secret-key')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # Update ALLOWED_HOSTS for production
-ALLOWED_HOSTS = ['dpg-csoqoud6l47c73943vpg-a','*']
+ALLOWED_HOSTS = ['192.168.0.102', '*','https://frontend-nuxt-to-do-list.onrender.com/']
 
 # Application definition
 INSTALLED_APPS = [
