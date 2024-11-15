@@ -137,7 +137,7 @@ class UserRegistrationView(APIView):
             user = User.objects.create(
                 username=username,
                 email=email,
-                password=make_password(password)  # Ensure the password is hashed
+                password=make_password(password)  
             )
             user.save()
 
